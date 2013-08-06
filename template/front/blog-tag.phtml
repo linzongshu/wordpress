@@ -1,0 +1,32 @@
+<?php
+//$this->headTitle($seo['title'], Zend\View\Helper\Placeholder\Container\AbstractContainer::PREPEND);
+//$this->headMeta()->setName('keywords', $seo['keywords']);
+//$this->headMeta()->setName('description', $seo['description']);
+
+$this->jQuery();
+?>
+<div class="main-block">
+    <div class="block-header-bg"></div>
+    <div class="block-header block-header40 mb10">
+        <span class="title title18"><?php _e('About') ?><span class="text-important divider"><?php echo $this->escape($tag); ?></span><?php _e('information'); ?></span>
+    </div>
+    <div>
+        <ul class="list list14">
+            <?php $index=0; ?>
+            <?php foreach ($posts as $post) {  $index++;?>
+            <li>
+                <div class="list-hover">
+                    <span class="muted pull-right"><?php echo date('Y-m-d', strtotime($post['post_date'])); ?></span>
+                    <a target="_blank" href="<?php echo $post['permalink']; ?>" title="<?php echo $this->escape($post['post_title']); ?>"><?php echo $this->escape($post['post_title']); ?></a>
+                </div>
+                <?php if($index%5==0) { ?>
+            <li class="dashed">
+                <?php } ?>
+                <?php } ?>
+        </ul>
+        <?php echo $this->paginationControl($paginator, 'Sliding', 'paginator.phtml',array('class' => 'pagination-centered')); ?>
+    </div>
+</div>
+<script>
+    $("#jsList").find(".dashed:last").css("marginBottom","0");
+</script>

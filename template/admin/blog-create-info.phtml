@@ -1,0 +1,35 @@
+<?php echo $this->form()->openTag($form); ?>
+
+    <div id='identity'>
+        <?php $element = $form->get('identity');?>
+        <div><?php
+            echo $this->formRow($element);
+            echo $this->formElementErrors($element);
+            ?></div>
+    </div>
+
+    <div id='name'>
+        <?php $element = $form->get('name');?>
+        <div><?php
+            echo $this->formRow($element);
+            echo $this->formElementErrors($element);
+            ?></div>
+    </div>
+
+    <div id='description'>
+        <?php $element = $form->get('description');?>
+        <div><?php
+            echo $this->formRow($element);
+            echo $this->formElementErrors($element);
+            ?></div>
+    </div>
+
+    <div id='submit'>
+        <?php $element = $form->get('submit');?>
+        <div><?php
+            echo $this->formElement($element);
+            echo $this->formElementErrors($element);
+            ?></div>
+    </div>
+
+<?php echo $this->form()->closeTag($form);?>

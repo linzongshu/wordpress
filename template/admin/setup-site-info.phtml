@@ -1,0 +1,79 @@
+<?php echo $this->form()->openTag($form); ?>
+
+<div id='install_path'>
+    <?php $element = $form->get('install_path'); ?>
+    <div>
+        <dt><?php echo $this->formLabel($element); ?></dt>
+        <div class="input-prepend">
+            <span class="add-on">www/</span>
+            <?php echo $this->formInput($element); ?>
+        </div>
+        <?php echo $this->formElementErrors($element); ?>
+    </div>
+</div>
+
+<div id='blog_title'>
+    <?php $element = $form->get('blog_title');?>
+    <div><?php
+        echo $this->formRow($element);
+        echo $this->formElementErrors($element);
+        ?></div>
+</div>
+
+<div id='site_url'>
+    <?php $element = $form->get('site_url');?>
+    <div><?php
+        echo $this->formRow($element);
+        echo $this->formElementErrors($element);
+        ?></div>
+</div>
+
+<div id='db_name'>
+    <?php $element = $form->get('db_name');?>
+    <div><?php
+        echo $this->formRow($element);
+        echo $this->formElementErrors($element);
+        ?></div>
+</div>
+
+<div id='db_user'>
+    <?php $element = $form->get('db_user');?>
+    <div><?php
+        echo $this->formRow($element);
+        echo $this->formElementErrors($element);
+        ?></div>
+</div>
+
+<div id='db_password'>
+    <?php $element = $form->get('db_password');?>
+    <div><?php
+        echo $this->formRow($element);
+        echo $this->formElementErrors($element);
+        ?></div>
+</div>
+
+<div id='db_host'>
+    <?php $element = $form->get('db_host');?>
+    <div><?php
+        echo $this->formRow($element);
+        echo $this->formElementErrors($element);
+        ?></div>
+</div>
+
+<div id='table_prefix'>
+    <?php $element = $form->get('table_prefix');?>
+    <div><?php
+        echo $this->formRow($element);
+        echo $this->formElementErrors($element);
+        ?></div>
+</div>
+
+<div id='submit'>
+    <?php $element = $form->get('submit');?>
+    <div><?php
+        echo $this->formElement($element);
+        echo $this->formElementErrors($element);
+        ?></div>
+</div>
+
+<?php echo $this->form()->closeTag($form);?>

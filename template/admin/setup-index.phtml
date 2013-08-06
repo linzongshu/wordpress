@@ -1,0 +1,8 @@
+<div class="alert alert-info">
+    <?php printf(__('WordPress has been installed in <strong>www/%s</strong>.'), $install_path);?>
+</div>
+<br />
+<div>
+    <a href="<?php echo $blog_url; ?>" class="btn btn-primary" target="_blank" /><?php echo __('Go to WordPress'); ?></a>
+    <a href="<?php echo $this->url('', array('action' => 'uninstall')); ?>" class="btn btn-danger" onclick="return window.confirm('<?php echo $uninstall_alert; ?>');"><?php echo __('Uninstall WordPress'); ?></a>
+</div>

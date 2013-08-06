@@ -1,0 +1,9 @@
+Wordpress Module Changelog
+
+
+Aug 6th, 2013
+=============================
+1. Create message moudle with version 1.0.0.
+
+
+LiJun Dong
